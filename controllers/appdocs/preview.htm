@@ -1,0 +1,26 @@
+<?php Block::put('breadcrumb') ?>
+<?=$this->btnsWidget->renderBreadcrump()?>
+<?php Block::endPut() ?>
+
+<?php if (!$this->fatalError): ?>
+
+<?= Form::open(['class' => 'layout']) ?>
+
+<div class="layout-row">
+    <?= $this->formRenderPreview() ?>
+</div>
+<div class="form-buttons">
+    <div class="loading-indicator-container">
+        <?= $this->btnsWidget->renderBar('preview') ?>
+    </div>
+</div>
+
+<?= Form::close() ?>
+
+<?php else: ?>
+
+<p class="flash-message static error"><?= e($this->fatalError) ?></p>
+<p><a href="<?= Backend::url('waka/docser/appdocs') ?>"
+       class="btn btn-default">Return to appdoc list</a></p>
+
+<?php endif ?>

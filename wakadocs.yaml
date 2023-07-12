@@ -1,0 +1,8 @@
+files:
+    docser_edit:
+        title: Documentation
+        group: "03 Edition"
+        comment: "Comment créer de nouvelles pages de doc"
+        permission: waka.docser.edit
+        relativePath: waka/docser/docs
+        order: 20

@@ -1,0 +1,38 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: waka.docser::appdoc.name
+        span: left
+        required: true
+    slug:
+        label: waka.docser::appdoc.slug
+        span: right
+        preset: name
+    limit_users:
+        label: waka.docser::appdoc.limit_users
+        span: left
+        default: true
+        type: switch
+    permissions:
+        label: waka.docser::appdoc.permissions
+        span: right
+        type: taglist
+        useKey: true
+        mode: array
+        options: listAllPermissions
+        trigger:
+            action: show
+            field: limit_users
+            condition: checked
+    description:
+        label: waka.docser::appdoc.description
+        span: full
+    content:
+        label: waka.docser::appdoc.content
+        span: full
+        type: markdown
+        required: true
+        size: giant

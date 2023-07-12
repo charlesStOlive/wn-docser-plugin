@@ -1,0 +1,52 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="<?= App::getLocale() ?>" class="no-js <?= $this->makeLayoutPartial('browser_detector') ?>">
+    <head>
+        <?= $this->makeLayoutPartial('head') ?>
+        <?= $this->fireViewEvent('backend.layout.extendHead', ['layout' => 'default.htm']) ?>
+    </head>
+    <body class="<?= $this->bodyClass ?>">
+        <div id="layout-canvas">
+            <?php if (\BackendAuth::isImpersonator()) : ?>
+                <div class="global-notice">
+                    <div class="notice-content">
+                        <span class="notice-text">
+                            <span class="notice-icon wn-icon icon-exclamation-triangle"></span>
+                            <?= e(trans('backend::lang.account.impersonating', [
+                                'impersonator' => \BackendAuth::getImpersonator()->email,
+                                'impersonatee' => \BackendAuth::getUser()->email,
+                            ])); ?>
+                        </span>
+                    </div>
+                    <a href="<?= Backend::url('backend/auth/signout') ?>" class="notice-action btn btn-secondary">
+                        <?= e(trans('backend::lang.account.stop_impersonating')) ?>
+                    </a>
+                </div>
+            <?php endif; ?>
+
+            <div class="layout">
+
+                <!-- Main Menu -->
+                <div class="layout-row min-size">
+                    <?= $this->makeLayoutPartial('mainmenu') ?>
+                </div>
+
+                <div class="layout flyout-container">
+                    <?= Block::placeholder('body') ?>
+                </div>
+
+
+
+                
+
+            </div>
+        </div>
+
+        <!-- Flash Messages -->
+        <div id="layout-flash-messages"><?= $this->makeLayoutPartial('flash_messages') ?></div>
+
+    </body>
+</html>

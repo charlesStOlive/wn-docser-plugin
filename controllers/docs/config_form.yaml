@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Doc
+
+# Model Form Field configuration
+form: $/waka/docser/models/doc/fields.yaml
+
+# Model Class name
+modelClass: Waka\Docser\Models\Doc
+
+# Default redirect location
+defaultRedirect: waka/docser/docs
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: waka/docser/docs/update/:id
+    redirectClose: waka/docser/docs
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: waka/docser/docs
+    redirectClose: waka/docser/docs
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

@@ -1,1 +1,1 @@
-# wn-docser-plugin
+ws-docser

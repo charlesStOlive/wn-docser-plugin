@@ -1,0 +1,11 @@
+# Liste des rôles
+Cette page ne peut être mise à jour que depuis la console du serveur. Si nécessaire, contactez l'admin de l'app.
+<br>Vous pouvez étendre les droits d'un utilisateur particulier dans l'onglet : permissions. Vous pourrez étendre ou restreindre les droits d'un utilisateur uniquement sur la base de vos propres droits. Par exemple, si vous n'avez pas accès à mailer, vous ne pourrez pas étendre les droits de mailer à un autre utilisateur. 
+<br>À noter : Waka est le nom des plugins transverse crée en surcouche du framekork. 
+{%for role in roles %}
+## {{ role.name }}
+{{ role.description }}<br><br>Liste des autorisations : 
+{% for key,permission in role.permissions %}
+* {{ permission | raw }}
+{% endfor %}
+{% endfor %}

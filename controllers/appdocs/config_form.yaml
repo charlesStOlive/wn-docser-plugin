@@ -1,0 +1,32 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: waka.docser::appdoc.form_name
+
+# Model Form Field configuration
+form: $/waka/docser/models/appdoc/fields.yaml
+
+# Model Class name
+modelClass: Waka\Docser\Models\Appdoc
+
+# Default redirect location
+defaultRedirect: waka/docser/appdocs
+
+# Create page
+create:
+    title: waka.docser::appdoc.create
+    redirect: waka/docser/appdocs/update/:id
+    redirectClose: waka/docser/appdocs
+    form: $/waka/docser/models/appdoc/fields_create.yaml
+
+# Update page
+update:
+    title: waka.docser::appdoc.update
+    redirect: waka/docser/appdocs/update/:id
+    redirectClose: waka/docser/appdocs
+
+# Preview page
+preview:
+    title: waka.docser::appdoc.preview_name

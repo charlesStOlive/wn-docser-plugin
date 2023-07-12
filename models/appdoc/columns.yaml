@@ -1,0 +1,19 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: waka.docser::appdoc.name
+        searchable: true
+    limit_users:
+        label: waka.docser::appdoc.limit_users
+        type: switch
+        searchable: false
+        sortable: true
+    updated_at:
+        label: waka.wutils::lang.global.updated_at
+        type: timetense
+    sort_order:
+        label: waka.wutils::lang.global.sort_order
+        invisible: true

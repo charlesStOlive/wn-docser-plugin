@@ -1,0 +1,7 @@
+1.0.1: First version of docser
+1.0.2: 
+  - 'Ajout de App doc'
+  - 'create_appdocs_table.php'
+1.0.3: 
+  - 'La colonne role deveint permissions'
+  - 'create_appdocs_table_u103.php'
