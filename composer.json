@@ -1,0 +1,12 @@
+{
+    "name": "waka/wn-docser-plugin",
+    "description": "Plugin pour salesforce",
+    "type": "october-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Charles Saint Olive",
+            "email": "contact@notilac.fr"
+        }
+    ]
+}
