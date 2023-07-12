@@ -1,7 +1,7 @@
 {
     "name": "waka/wn-docser-plugin",
     "description": "Plugin pour salesforce",
-    "type": "october-plugin",
+    "type": "winter-plugin",
     "license": "MIT",
     "authors": [
         {
