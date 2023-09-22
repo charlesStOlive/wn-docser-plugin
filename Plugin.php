@@ -87,7 +87,7 @@ class Plugin extends PluginBase
 
         return [
             'docser' => [
-                'label'       => \Lang::get('waka.docser::appdoc.title_front'),
+                'label'       => \Lang::get('waka.docser::lang.models.appdoc.title_front'),
                 'url'         => Backend::url('waka/docser/docs'),
                 'icon'        => 'icon-book',
                 'order'       => 1500,
@@ -104,8 +104,8 @@ class Plugin extends PluginBase
     {
         return [
             'appdocs' => [
-                'label' => \Lang::get('waka.docser::appdoc.menu_appdocs'),
-                'description' => \Lang::get('waka.docser::appdoc.menu_appdocs_description'),
+                'label' => \Lang::get('waka.docser::lang.models.appdoc.menu_appdocs'),
+                'description' => \Lang::get('waka.docser::lang.models.appdoc.menu_appdocs_description'),
                 'category' => SettingsManager::CATEGORY_SYSTEM,
                 'icon' => 'icon-book',
                 'url' => \Backend::url('waka/docser/appdocs/index/'),

@@ -4,20 +4,20 @@
 
 fields:
     name:
-        label: waka.docser::appdoc.name
+        label: waka.docser::lang.models.appdoc.name
         span: left
         required: true
     slug:
-        label: waka.docser::appdoc.slug
+        label: waka.docser::lang.models.appdoc.slug
         span: right
         preset: name
     limit_users:
-        label: waka.docser::appdoc.limit_users
+        label: waka.docser::lang.models.appdoc.limit_users
         span: left
         default: true
         type: switch
     permissions:
-        label: waka.docser::appdoc.permissions
+        label: waka.docser::lang.models.appdoc.permissions
         span: right
         type: taglist
         useKey: true
@@ -28,10 +28,10 @@ fields:
             field: limit_users
             condition: checked
     description:
-        label: waka.docser::appdoc.description
+        label: waka.docser::lang.models.appdoc.description
         span: full
     content:
-        label: waka.docser::appdoc.content
+        label: waka.docser::lang.models.appdoc.content
         span: full
         type: markdown
         required: true

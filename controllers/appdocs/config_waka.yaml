@@ -1,0 +1,39 @@
+# ===================================
+#  WakaController | Workflow | Productor |  Behavior Config
+# ===================================
+
+
+modelClass: Waka\Docser\Models\Appdoc
+backendUrl: waka/docser/appdocs
+
+workflow: false 
+
+
+controllerConfig:
+    breadcrump:
+        inSettings: true 
+        title: waka.docser::lang.models.appdoc.label
+        rows: 
+            index: 
+                label: waka.docser::lang.controllers.appdocs.label
+                url: waka/docser/appdocs 
+    index:
+        base:
+            create: 
+                show: true
+                permissions: [waka.docser.*]
+            reorder: 
+                show: false  
+                permissions: []
+            delete: 
+                show: true
+                permissions: [waka.docser.*]
+        # partials:
+        #     index_btn:
+        #         url: $/waka/docser/controllers/appdocs/_index_btn.php
+    update:
+        # partials:
+        #     update_btn:
+        #         url: $/waka/docser/controllers/appdocs/_update_btn.php
+
+

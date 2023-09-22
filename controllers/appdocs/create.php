@@ -1,0 +1,1 @@
+<?= $this->wakaController->renderCreate() ?>

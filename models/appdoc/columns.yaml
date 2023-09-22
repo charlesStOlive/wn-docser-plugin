@@ -4,10 +4,10 @@
 
 columns:
     name:
-        label: waka.docser::appdoc.name
+        label: waka.docser::lang.models.appdoc.name
         searchable: true
     limit_users:
-        label: waka.docser::appdoc.limit_users
+        label: waka.docser::lang.models.appdoc.limit_users
         type: switch
         searchable: false
         sortable: true

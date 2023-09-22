@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: waka.docser::appdoc.form_name
+name: waka.docser::lang.controllers.appdocs.label
 
 # Model Form Field configuration
 form: $/waka/docser/models/appdoc/fields.yaml
@@ -16,17 +16,16 @@ defaultRedirect: waka/docser/appdocs
 
 # Create page
 create:
-    title: waka.docser::appdoc.create
+    title: backend::lang.form.create_title
     redirect: waka/docser/appdocs/update/:id
     redirectClose: waka/docser/appdocs
-    form: $/waka/docser/models/appdoc/fields_create.yaml
 
 # Update page
 update:
-    title: waka.docser::appdoc.update
-    redirect: waka/docser/appdocs/update/:id
+    title: backend::lang.form.update_title
+    redirect: waka/docser/appdocs
     redirectClose: waka/docser/appdocs
 
 # Preview page
 preview:
-    title: waka.docser::appdoc.preview_name
+    title: backend::lang.form.preview_title

@@ -2,35 +2,30 @@
 
 use BackendMenu;
 use Backend\Classes\Controller;
-use System\Classes\SettingsManager;
-
+use System\Classes\SettingsManager; 
 /**
- * Appdoc Back-end Controller
+ * Appdocs Backend Controller
  */
 class Appdocs extends Controller
 {
+    /**
+     * @var array Behaviors that are implemented by this controller.
+     */
     public $implement = [
-        'Backend.Behaviors.FormController',
-        'Backend.Behaviors.ListController',
-        'Waka.Wutils.Behaviors.BtnsBehavior',
+        \Backend\Behaviors\FormController::class,
+        \Backend\Behaviors\ListController::class,
+        \Waka\Wutils\Behaviors\WakaControllerBehavior::class,
     ];
-    public $formConfig = 'config_form.yaml';
-    public $listConfig = 'config_list.yaml';
-    public $btnsConfig = 'config_btns.yaml';
 
     public $requiredPermissions = ['waka.docser.edit'];
-    //FIN DE LA CONFIG AUTO
-    //startKeep/
-    
+
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('October.System', 'system', 'settings');
-        SettingsManager::setContext('Waka.Docser', 'Appdocs');
+        BackendMenu::setContext('Winter.System', 'system', 'settings');
+        SettingsManager::setContext('Waka.Docser', 'appdocs');
     }
 
     
-
-        //endKeep/
+    
 }
-
