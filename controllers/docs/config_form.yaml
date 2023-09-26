@@ -23,7 +23,7 @@ create:
 # Update page
 update:
     title: backend::lang.form.update_title
-    redirect: waka/docser/docs
+    redirect: waka/docser/docs/update/:id
     redirectClose: waka/docser/docs
 
 # Preview page
