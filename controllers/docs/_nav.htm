@@ -4,8 +4,8 @@
 ">
     <?php $param = $this->params[0] ?? null ?>
     <div id="docsMenu">
-        <h1><a href="<?= Backend::url('waka/docser/docs/index/') ?>"><?=e(trans('waka.docser::lang.documentation'))?></a></h1>
-        <h2 class="wdoc-title"><?=e(trans('waka.docser::lang.app_usage'))?></h2>
+        <h1><a href="<?= Backend::url('waka/docser/docs/index/') ?>"><?=e(trans('waka.docser::lang.models.appdoc.label'))?></a></h1>
+        <h2 class="wdoc-title"><?=e(trans('waka.docser::lang.controllers.appdocs.app_usage'))?></h2>
         <div>
             <?php foreach ($manualDocsNav as $data) : ?>
 
@@ -19,7 +19,7 @@
                 </a>
             <?php endforeach ?>
         </div>
-        <h2 class="wdoc-title"><?=e(trans('waka.docser::lang.technical_doc'))?></h2>
+        <h2 class="wdoc-title"><?=e(trans('waka.docser::lang.controllers.appdocs.tecnical_doc'))?></h2>
         <div>
             <?php foreach ($systemDocsNav as $label => $group) : ?>
                 <p class="wdoc-subtitle"><?= $label ?></p>
