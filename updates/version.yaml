@@ -1,7 +1,10 @@
-1.0.1: First version of docser
-1.0.2: 
-  - 'Ajout de App doc'
-  - 'create_appdocs_table.php'
-1.0.3: 
-  - 'La colonne role deveint permissions'
-  - 'create_appdocs_table_u103.php'
+1.0.1:
+    - 'First version of docser'
+    - v1.0.1/create_appdocs_table.php
+1.0.2:
+    - 'Create categoryDocs Table'
+    - v1.0.2/create_category_docs_table.php
+    - v1.0.2/seed_category_docs_table.php
+1.0.3:
+    - 'Add category_slug'
+    - v1.0.3/change_appdocs_table.php

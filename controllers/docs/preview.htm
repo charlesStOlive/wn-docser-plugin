@@ -5,7 +5,9 @@
     </div>
     <!-- Contenu -->
     <div class="layout-cell layout-container">
+        <?php if(isset($title)) : ?>
             <h1><?= $title ?></h1>
+        <?php endif ?>
         <div id="docs-content">
             <?=$content?>
         </div>

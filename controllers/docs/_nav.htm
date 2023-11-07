@@ -5,13 +5,14 @@
     <?php $param = $this->params[0] ?? null ?>
     <div id="docsMenu">
         <h1><a href="<?= Backend::url('waka/docser/docs/index/') ?>"><?=e(trans('waka.docser::lang.models.appdoc.label'))?></a></h1>
-        <h2 class="wdoc-title"><?=e(trans('waka.docser::lang.controllers.appdocs.app_usage'))?></h2>
+        <?php foreach ($systemsNav as $key=>$index) : ?>
+        <h2 class="wdoc-title"><?=$key?></h2>
         <div>
-            <?php foreach ($manualDocsNav as $data) : ?>
+            <?php foreach ($index as $data) : ?>
 
-                <a href="<?= Backend::url('waka/docser/docs/manual_preview/' . $data['slug']) ?>" class="<?php if ($data['slug'] == $param) : ?>current<?php endif ?>">
+                <a href="<?= Backend::url('waka/docser/docs/preview/' . $data['slug']) ?>" class="<?php if ($data['slug'] == $param) : ?>current<?php endif ?>">
                     <div>
-                        <span class="header"><?= $data['name'] ?? 'inc' ?></span>
+                        <span class="header"><?= $data['name'] ?? $data['title'] ?></span>
                         <?php if ($data['description'] ?? false) : ?>
                             <span class="description"><?= $data['description'] ?? 'inc' ?></span>
                         <?php endif ?>
@@ -19,22 +20,6 @@
                 </a>
             <?php endforeach ?>
         </div>
-        <h2 class="wdoc-title"><?=e(trans('waka.docser::lang.controllers.appdocs.tecnical_doc'))?></h2>
-        <div>
-            <?php foreach ($systemDocsNav as $label => $group) : ?>
-                <p class="wdoc-subtitle"><?= $label ?></p>
-                <?php foreach ($group as $key => $doc) { ?>
-
-                    <a href="<?= Backend::url('waka/docser/docs/system_preview/' . $doc['code']) ?>" class="<?php if ($doc['code'] == $param) : ?>current<?php endif ?>">
-                        <div>
-                            <span class="header"><?= $doc['title'] ?? 'inc' ?></span>
-                            <?php if ($doc['comment'] ?? false) : ?>
-                                <span class="description"><?= $doc['comment'] ?? 'inc' ?></span>
-                            <?php endif ?>
-                        </div>
-                    </a>
-                <?php } ?>
-            <?php endforeach ?>
-        </div>
+        <?php endforeach ?>
     </div>
 </div>

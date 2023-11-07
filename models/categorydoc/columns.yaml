@@ -1,0 +1,27 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: 'waka.docser::lang.models.general.id'
+        searchable: true
+        invisible: true
+    name:
+        label: waka.docser::lang.models.categorydoc.name
+    slug:
+        label: waka.docser::lang.models.categorydoc.slug
+    sort_order: 
+        label: waka.docser::lang.models.categorydoc.sort_order
+    created_at:
+        label: 'waka.docser::lang.models.general.created_at'
+        type: datetime
+        searchable: true
+        sortable: true
+        invisible: true
+    updated_at:
+        label: 'waka.docser::lang.models.general.updated_at'
+        type: datetime
+        searchable: true
+        sortable: true
+        invisible: true

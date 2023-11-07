@@ -3,8 +3,8 @@
 # ===================================
 
 
-modelClass: Waka\Docser\Models\Appdoc
-backendUrl: waka/docser/appdocs
+modelClass: Waka\Docser\Models\CategoryDoc
+backendUrl: waka/docser/categorydocs
 
 workflow: false 
 
@@ -12,30 +12,32 @@ workflow: false
 controllerConfig:
     breadcrump:
         inSettings: true 
-        title: waka.docser::lang.models.appdoc.label
+        title: waka.docser::lang.models.categorydoc.label
         rows: 
-            index: 
+            preIndex: 
                 label: waka.docser::lang.controllers.appdocs.label
-                url: waka/docser/appdocs 
+                url:  waka/docser/appdocs 
+            index: 
+                label: waka.docser::lang.controllers.categorydocs.label
+                url: waka/docser/categorydocs 
     index:
         base:
             create: 
                 show: true
                 permissions: [waka.docser.*]
             reorder: 
-                show: false  
-                permissions: []
+                show: true  
+                permissions: [waka.docser.*]
             delete: 
                 show: true
                 permissions: [waka.docser.*]
         partials:
             index_btn:
-                url: $/waka/docser/controllers/appdocs/_index_btn.php
+                url: $/waka/docser/controllers/categorydocs/_index_btn.php
     update:
         # partials:
         #     update_btn:
-        #         url: $/waka/docser/controllers/appdocs/_update_btn.php
-
+        #         url: $/waka/docser/controllers/categorydocs/_update_btn.php
 
 reorder:
     title: waka.wutils::lang.global.reorder

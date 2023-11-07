@@ -4,7 +4,7 @@ use Winter\Storm\Database\Schema\Blueprint;
 use Winter\Storm\Database\Updates\Migration;
 use Schema;
 
-class CreateAppdocsTable extends Migration
+return new class extends Migration
 {
     public function up()
     {
@@ -14,7 +14,7 @@ class CreateAppdocsTable extends Migration
             $table->string('name')->nullable();
             $table->string('slug')->nullable();
             $table->boolean('limit_users')->nullable();
-            $table->text('roles')->nullable();
+            $table->text('permissions')->nullable();
             $table->string('description')->nullable();
             $table->text('content')->nullable();
             //reorder
@@ -27,4 +27,4 @@ class CreateAppdocsTable extends Migration
     {
         Schema::dropIfExists('waka_docser_appdocs');
     }
-}
+};

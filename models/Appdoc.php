@@ -14,8 +14,6 @@ class Appdoc extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
     use \Winter\Storm\Database\Traits\Sortable;
-
-
     /**
      * @var string The database table used by the model.
      */
@@ -37,6 +35,7 @@ class Appdoc extends Model
      */
     public $rules = [
         'name' => 'required',
+        'category_slug' => 'required',
         'description' => 'max: 200',
         'content' => 'required',
     ];
@@ -128,6 +127,10 @@ class Appdoc extends Model
             }
         }
         return $permissions;
+    }
+
+    public function listCategorySlug() {
+        return CategoryDoc::pluck('name', 'slug');
     }
 
     /**

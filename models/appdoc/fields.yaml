@@ -11,6 +11,11 @@ fields:
         label: waka.docser::lang.models.appdoc.slug
         span: right
         preset: name
+    category_slug:
+        label: waka.docser::lang.models.appdoc.category_slug
+        span: left
+        type: dropdown 
+        options: listCategorySlug
     limit_users:
         label: waka.docser::lang.models.appdoc.limit_users
         span: left

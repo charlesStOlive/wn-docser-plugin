@@ -1,0 +1,13 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: waka.docser::lang.models.general.id
+        disabled: true
+    name:
+        label: waka.docser::lang.models.categorydoc.name
+    slug:
+        label: waka.docser::lang.models.categorydoc.slug
+        preset: name

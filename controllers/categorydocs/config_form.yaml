@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: waka.docser::lang.controllers.categorydocs.label
+
+# Model Form Field configuration
+form: $/waka/docser/models/categorydoc/fields.yaml
+
+# Model Class name
+modelClass: Waka\Docser\Models\CategoryDoc
+
+# Default redirect location
+defaultRedirect: waka/docser/categorydocs
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: waka/docser/categorydocs/update/:id
+    redirectClose: waka/docser/categorydocs
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: waka/docser/categorydocs/update/:id
+    redirectClose: waka/docser/categorydocs
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
