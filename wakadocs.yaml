@@ -3,6 +3,6 @@ files:
         title: Documentation
         category_slug: "administration"
         comment: "Comment créer de nouvelles pages de doc"
-        permission: waka.docser.edit
+        permissions: waka.docser.edit
         relativePath: waka/docser/docs
         sort_order: 1000

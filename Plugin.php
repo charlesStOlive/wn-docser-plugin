@@ -66,13 +66,13 @@ class Plugin extends PluginBase
                 'tab' => 'Waka - docser',
                 'label' => 'Peut créer de la doc',
             ],
-             'waka.docser.doc.technic' => [
+             'waka.docser.modules' => [
                 'tab' => 'Waka - docser',
-                'label' => 'A accès aux docs techniques',
+                'label' => 'A accès aux docs des modules',
             ],
-             'waka.docser.doc.integrator' => [
+             'waka.docser.administration' => [
                 'tab' => 'Waka - docser',
-                'label' => 'A accès aux docs pour les integrateurs',
+                'label' => 'A accès aux docs d\'administration',
             ],
         ];
     }

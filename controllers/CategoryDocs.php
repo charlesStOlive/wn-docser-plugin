@@ -18,7 +18,7 @@ class CategoryDocs extends Controller
         \Waka\Wutils\Behaviors\WakaReorderController::class,
     ];
 
-    public $requiredPermissions = ['waka.docser.*'];
+    public $requiredPermissions = ['waka.docser.edit'];
 
     public function __construct()
     {

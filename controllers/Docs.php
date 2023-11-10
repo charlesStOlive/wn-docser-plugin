@@ -18,11 +18,14 @@ class Docs extends Controller
     private Collection $docsCollection;
     private Collection $partsCollection;
 
-
+    public $requiredPermissions = ['waka.docser.*'];
 
     public function __construct()
     {
         parent::__construct();
+        if(!$this->user) {
+            return \Redirect::to(\Backend::url('auth/signin'));
+        }
         $this->addCss('/plugins/waka/docser/assets/css/docs.css');
         BackendMenu::setContext('Waka.Docser', 'docs');
         $this->getDocsData();
@@ -47,14 +50,14 @@ class Docs extends Controller
 
     private function addIds($html)
     {
-        trace_log($html);
+        //trace_log($html);
         $dom = new \DOMDocument();
         @$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
 
         // Récupérez tous les éléments de titre (h1, h2, etc.)
         $xpath = new \DOMXPath($dom);
         $titles = $xpath->query('//h1 | //h2 | //h3 | //h4 | //h5 | //h6');
-        trace_log($titles);
+        //trace_log($titles);
 
         foreach ($titles as $title) {
             // Créez un ID unique. Ici, nous utilisons le contenu du titre, mais assurez-vous qu'il est unique.
@@ -69,8 +72,9 @@ class Docs extends Controller
     public function getNavigation()
     {
         //Récupération des doc de la BDD
-        $bddDoc = Appdoc::get(['name', 'slug', 'description', 'permissions', 'category_slug'])->groupBy('category_slug');
-        $bddDoc = $this->filterByPermission($bddDoc)->toArray();
+        $bddDoc = Appdoc::get(['name', 'slug', 'description', 'permissions', 'category_slug']);
+        $bddDoc = $this->filterByPermission($bddDoc);
+        $bddDoc = $bddDoc->groupBy('category_slug')->toArray();
         //Récuperation de la doc auto des plugins
         $pluginDoc = $this->docsCollection->sortBy('order');
         $pluginDoc->transform(function ($element, $key) {
@@ -96,7 +100,11 @@ class Docs extends Controller
     private function filterByPermission($datas)
     {
         return $datas->filter(function ($item) {
-            $permissions = $item['permissions'] ?? false;
+            $permissions = $item['permissions'] ?? [];
+            if(!is_array($permissions)) {
+                $permissions = array_map('trim', explode(',', $permissions));
+            }
+            // trace_log($permissions);
             if ($permissions) {
                 if ($this->user->hasAccess($permissions, false)) {
                     return true;
