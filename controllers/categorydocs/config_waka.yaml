@@ -10,7 +10,7 @@ workflow: false
 
 
 controllerConfig:
-    breadcrump:
+    breadcrumb:
         inSettings: true 
         title: waka.docser::lang.models.categorydoc.label
         rows: 
