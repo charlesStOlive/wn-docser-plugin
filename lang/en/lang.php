@@ -3,39 +3,39 @@
 return [
     'controllers' => [
         'appdocs' => [
-            'category_docs' => 'Catégories',
+            'category_docs' => 'Categories',
             'label' => 'Appdocs',
         ],
         'categorydocs' => [
             'label' => 'Category Docs',
         ],
-        'text_intro' => 'Choisissez un élément dans le menu',
+        'text_intro' => 'Choose an item from the menu',
     ],
     'models' => [
         'appdoc' => [
-            'category_slug' => 'Catégorie',
-            'content' => 'Utilise une source de données',
+            'category_slug' => 'Category',
+            'content' => 'Uses a data source',
             'description' => 'Description',
             'label' => 'Doc',
-            'limit_users' => 'Limité à certains rôles',
+            'limit_users' => 'Limited to certain roles',
             'menu_appdocs' => 'Documentations',
-            'menu_appdocs_description' => 'Créer et modifier des pages de documentation',
-            'name' => 'Nom de la page',
+            'menu_appdocs_description' => 'Create and modify documentation pages',
+            'name' => 'Page name',
             'permissions' => 'Permissions',
-            'roles' => 'Rôles',
-            'slug' => 'Slug de la page',
+            'roles' => 'Roles',
+            'slug' => 'Page slug',
             'title_front' => 'Documentation',
         ],
         'categorydoc' => [
             'label' => 'Category Doc',
-            'name' => 'Nom catégorie',
+            'name' => 'Category name',
             'slug' => 'Code',
-            'sort_order' => 'Ordre',
+            'sort_order' => 'Order',
         ],
         'general' => [
-            'created_at' => 'Crée le',
+            'created_at' => 'Created on',
             'id' => 'ID',
-            'updated_at' => 'MAJ le',
+            'updated_at' => 'Updated on',
         ],
     ],
 ];
