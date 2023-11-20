@@ -18,8 +18,6 @@ class Docs extends Controller
     private Collection $docsCollection;
     private Collection $partsCollection;
 
-    public $requiredPermissions = ['waka.docser.*'];
-
     public function __construct()
     {
         parent::__construct();
